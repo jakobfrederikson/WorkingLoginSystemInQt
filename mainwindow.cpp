@@ -51,7 +51,8 @@ void MainWindow::on_pushButton_login_clicked()
     for (int i = 0; i < loginData.size(); i++)
     {
         // If both username and password are correct, set the boolean values to true.
-        if (username == loginData[i] &&
+        if (i % 2 == 0 && 
+            username == loginData[i] &&
             password == loginData[i + 1])
         {
             foundUser = true;
